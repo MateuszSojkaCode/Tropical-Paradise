@@ -1,0 +1,18 @@
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grid{
+    display: grid;
+
+    &__2-cols{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__3-cols{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &__4-cols{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
