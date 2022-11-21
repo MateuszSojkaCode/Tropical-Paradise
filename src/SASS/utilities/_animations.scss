@@ -1,0 +1,20 @@
+.btn-animation{
+    transition: border .4s;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -9rem;
+        height: 100%;
+        width: 7rem;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255) 50%);;
+        transform: skewX(-45deg);
+        transition: left .4s;        
+    }
+    &:hover{
+        border: 1px solid black;
+    }
+    &:hover::before{
+        left: 15rem;
+    }
+}

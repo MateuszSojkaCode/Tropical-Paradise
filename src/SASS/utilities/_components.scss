@@ -16,3 +16,26 @@
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
+//white-block
+
+.white-block{
+    position: absolute;    
+    height: 6rem;
+    width: 60%;
+    background-color: #fff;
+    transform: skewX(45deg);
+    &--left{
+        bottom: 0;
+        left: -5rem;
+    }
+    &--right{
+        top: 0;
+        right: -5rem;
+    }
+}
+ @media(min-width: 768px){
+    .white-block{
+        width: 45%;
+    }
+ }
