@@ -12,20 +12,20 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	font-family: "Lato", sans-serif; 
-	font-size: 1.6rem;	
+	font-family: "Lato", sans-serif;
+	font-size: 1.6rem;
 	line-height: 1.6;
 }
-a{
-    text-decoration: none;
+a {
+	text-decoration: none;
 }
-li{
-    list-style: none;
+li {
+	list-style: none;
 }
 
 // navigation
 
-.navBtn{
+.navBtn {
 	position: fixed;
 	top: 2rem;
 	right: 2rem;
@@ -33,49 +33,50 @@ li{
 	border: 1px solid transparent;
 	background: none;
 	cursor: pointer;
-	z-index: 1100;	
-	
-	&:focus{
+	z-index: 1100;
+
+	&:focus {
 		outline: none;
-		border: 1px solid rgba($color: #fff, $alpha: .5);
+		border: 1px solid rgba($color: #fff, $alpha: 0.5);
 		border-radius: 5px;
 	}
-	
-	&__box{
+
+	&__box {
 		position: relative;
 		width: 4rem;
 		height: 3.5rem;
 	}
-	&__line, &__line::after, &__line::before{
+	&__line,
+	&__line::after,
+	&__line::before {
 		position: absolute;
 		right: 0;
 		height: 3px;
 		background-color: #fff;
-		transition: width .3s;
+		transition: width 0.3s;
 	}
-	&__line{
+	&__line {
 		width: 100%;
-		&::after{
+		&::after {
 			content: "";
 			top: 15px;
 			width: 66%;
 		}
-		&::before{
+		&::before {
 			content: "";
 			top: 30px;
 			width: 33%;
-			transition-delay: .1s;
+			transition-delay: 0.1s;
 		}
 	}
-	&:hover{
+	&:hover {
 		.navBtn__line::after,
-		.navBtn__line::before{
+		.navBtn__line::before {
 			width: 100%;
 		}
 	}
-
 }
-.nav{
+.nav {
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -85,23 +86,23 @@ li{
 	height: 100vh;
 	background-image: $light-blue-gradient-solid;
 	transform: translateX(100%);
-	transition: transform .5s;
+	transition: transform 0.5s;
 	overflow: hidden;
 	z-index: 1000;
-	
-	&__link{
+
+	&__link {
 		position: relative;
 		display: block;
 		margin: 1.5rem;
 		padding: 1rem;
 		color: #fff;
 		font-size: 3.2rem;
-		text-transform: uppercase; 
+		text-transform: uppercase;
 		font-weight: 300;
-		transition: all .3s .2s;
+		transition: all 0.3s 0.2s;
 		z-index: 1;
 
-		&::before{
+		&::before {
 			content: "";
 			position: absolute;
 			bottom: 0;
@@ -110,25 +111,25 @@ li{
 			height: 100%;
 			transform: scaleY(0);
 			background-color: #fff;
-			transition: transform .3s, width .3s .2s;
+			transition: transform 0.3s, width 0.3s 0.2s;
 			z-index: -1;
 		}
 
-		&:hover::before{
+		&:hover::before {
 			transform: scaleY(1);
 			width: 100%;
 		}
-		&:hover{
+		&:hover {
 			color: $light-main-color;
 		}
 	}
 }
-.showNav{
+.showNav {
 	transform: translateX(-2rem);
 }
 
 // header
-.header{
+.header {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -141,23 +142,23 @@ li{
 	background-position: center;
 	background-size: cover;
 
-	&__title{
+	&__title {
 		// margin-bottom: 1rem;
 		font-family: "Dancing Script", cursive;
 		font-size: 3.6rem;
 		color: #fff;
 		font-weight: 300;
-		text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1.0);
+		text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1);
 	}
-	&__text{
+	&__text {
 		padding: 1rem;
 		font-size: 1.4rem;
 		color: $light-gray-e;
-		text-shadow: 0 0 .5rem rgba($color: #000000, $alpha: 1.0);
+		text-shadow: 0 0 0.5rem rgba($color: #000000, $alpha: 1);
 	}
-	&__button{
+	&__button {
 		position: relative;
-		padding: .7rem 1.4rem;
+		padding: 0.7rem 1.4rem;
 		font-size: 1.4rem;
 		color: $dark-grey-1;
 		border: 1px solid transparent;
@@ -168,146 +169,144 @@ li{
 	}
 }
 
-
 // about
-.about{
-	&__box{
-		padding: 3rem;;
+.about {
+	&__box {
+		padding: 3rem;
 	}
-	&__text{
+	&__text {
 		padding: 3rem 0;
 		font-size: 1.4rem;
 		color: $dark-grey-1;
 	}
-	&__heading{
+	&__heading {
 		margin-bottom: 1rem;
 		text-transform: uppercase;
 		font-weight: 300;
 	}
-	&__paragraph{
+	&__paragraph {
 		margin: 1rem 0;
 	}
-	&__btn{
+	&__btn {
 		position: relative;
 		padding: 3px;
 		border-bottom: 1px solid $main-color;
-		transition: color .3s;
+		transition: color 0.3s;
 	}
-	&__imgs{
+	&__imgs {
 		position: relative;
 		font-size: 0;
 	}
-	&__img{
+	&__img {
 		position: relative;
 		width: 33.3%;
 		cursor: pointer;
-		transition: transform .3s, box-shadow .3s;
-		box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: .4);
-		&--1{
+		transition: transform 0.3s, box-shadow 0.3s;
+		box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.4);
+		&--1 {
 			top: 2rem;
 			left: 1rem;
 			transform: scale(1.15);
 		}
-		&--2{
+		&--2 {
 			transform: scale(1.15);
 			z-index: 1;
 		}
-		&--3{
+		&--3 {
 			top: 4rem;
 			right: 1rem;
 			transform: scale(1.15);
 		}
-		&:hover{
+		&:hover {
 			transform: scale(1.2) translateY(-1rem);
-			box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: .6);
+			box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.6);
 			z-index: 5;
 		}
 	}
 }
 
-
-@media(min-width: 768px){
-	body{
+@media (min-width: 768px) {
+	body {
 		margin: 1rem;
 	}
-	.navBtn{
+	.navBtn {
 		top: 4rem;
 		right: 4rem;
 	}
-	.nav{
-		&__link{
+	.nav {
+		&__link {
 			font-size: 4.8rem;
 		}
 	}
-	.header{
+	.header {
 		background-image: $blue-gradient, url(../../src/img/header-big.jpg);
-		&__title{
+		&__title {
 			font-size: 7.2rem;
 		}
-		&__text{
+		&__text {
 			font-size: 2.2rem;
 		}
-		&__button{
+		&__button {
 			margin-top: 1rem;
-			padding: .9rem 1.8rem;
+			padding: 0.9rem 1.8rem;
 			font-size: 1.8rem;
 		}
 	}
-	.about{
-		&__box{
+	.about {
+		&__box {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 4rem;
 		}
-		&__text{
+		&__text {
 			padding: 3rem;
 		}
-		&__heading{
+		&__heading {
 			font-size: 2.4rem;
 		}
-		&__paragraph{
+		&__paragraph {
 			font-size: 1.6rem;
 		}
-		&__imgs{
+		&__imgs {
 			position: relative;
 		}
-		&__img{
+		&__img {
 			position: absolute;
 			width: 45%;
-			&--1{
+			&--1 {
 				top: 20%;
 				left: 2rem;
 			}
-			&--2{
+			&--2 {
 				top: 15%;
 				right: 0;
 			}
-			&--3{
+			&--3 {
 				top: 35%;
 				left: 30%;
 			}
 		}
-		&__btn{
+		&__btn {
 			font-size: 1.6rem;
 		}
 	}
 }
 
-@media(min-width: 992px){
-	body{
+@media (min-width: 992px) {
+	body {
 		margin: 2rem;
 	}
-	.about{
-		&__img{
+	.about {
+		&__img {
 			width: 55%;
-			&--1{
+			&--1 {
 				top: 3rem;
 				left: 0;
 			}
-			&--2{
+			&--2 {
 				top: 0rem;
 			}
-			&--3{
+			&--3 {
 				top: 15rem;
 				left: 20%;
 			}
