@@ -12,14 +12,364 @@ html {
 	scroll-behavior: smooth;
 }
 body {
+	font-family: "Lato", sans-serif;
 	font-size: 1.6rem;
-	font-family: "Dancing Script", cursive;
-	font-family: "Lato", sans-serif; 
+	line-height: 1.6;
 }
-a{
-    text-decoration: none;
+a {
+	text-decoration: none;
 }
-li{
-    list-style: none;
+li {
+	list-style: none;
 }
 
+// navigation
+
+.navBtn {
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	padding: 1rem;
+	border: 1px solid transparent;
+	background: none;
+	cursor: pointer;
+	z-index: 1100;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba($color: #fff, $alpha: 0.5);
+		border-radius: 5px;
+	}
+
+	&__box {
+		position: relative;
+		width: 4rem;
+		height: 3.5rem;
+	}
+	&__line,
+	&__line::after,
+	&__line::before {
+		position: absolute;
+		right: 0;
+		height: 3px;
+		background-color: #fff;
+		transition: width 0.3s;
+	}
+	&__line {
+		width: 100%;
+		&::after {
+			content: "";
+			top: 15px;
+			width: 66%;
+		}
+		&::before {
+			content: "";
+			top: 30px;
+			width: 33%;
+			transition-delay: 0.1s;
+		}
+	}
+	&:hover {
+		.navBtn__line::after,
+		.navBtn__line::before {
+			width: 100%;
+		}
+	}
+}
+.nav {
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 105%;
+	height: 100vh;
+	background-image: $light-blue-gradient-solid;
+	transform: translateX(100%);
+	transition: transform 0.5s;
+	overflow: hidden;
+	z-index: 1000;
+
+	&__link {
+		position: relative;
+		display: block;
+		margin: 1.5rem;
+		padding: 1rem;
+		color: #fff;
+		font-size: 3.2rem;
+		text-transform: uppercase;
+		font-weight: 300;
+		transition: all 0.3s 0.2s;
+		z-index: 1;
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 4px;
+			height: 100%;
+			transform: scaleY(0);
+			background-color: #fff;
+			transition: transform 0.3s, width 0.3s 0.2s;
+			z-index: -1;
+		}
+
+		&:hover::before {
+			transform: scaleY(1);
+			width: 100%;
+		}
+		&:hover {
+			color: $light-main-color;
+		}
+	}
+}
+.showNav {
+	transform: translateX(-2rem);
+}
+
+// header
+.header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 70vh;
+	padding: 2rem;
+	text-align: center;
+	background-image: $blue-gradient, url(../../src/img/header-mini.jpg);
+	background-position: center;
+	background-size: cover;
+
+	&__title {
+		// margin-bottom: 1rem;
+		font-family: "Dancing Script", cursive;
+		font-size: 3.6rem;
+		color: #fff;
+		font-weight: 300;
+		text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1);
+	}
+	&__text {
+		padding: 1rem;
+		font-size: 1.4rem;
+		color: $light-gray-e;
+		text-shadow: 0 0 0.5rem rgba($color: #000000, $alpha: 1);
+	}
+	&__button {
+		position: relative;
+		padding: 0.7rem 1.4rem;
+		font-size: 1.4rem;
+		color: $dark-grey-1;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		background-color: $light-gray-c;
+		overflow: hidden;
+		cursor: pointer;
+	}
+}
+
+// about
+.about {
+	margin-bottom: 3rem;
+	&__box {
+		padding: 3rem;
+	}
+	&__text {
+		padding: 3rem 0;
+		font-size: 1.4rem;
+		color: $dark-grey-1;
+	}
+	&__heading {
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+	&__paragraph {
+		margin: 1rem 0;
+	}
+	&__btn {
+		position: relative;
+		padding: 3px;
+		border-bottom: 1px solid $main-color;
+		transition: color 0.3s;
+	}
+	&__imgs {
+		position: relative;
+		font-size: 0;
+	}
+	&__img {
+		position: relative;
+		width: 33.3%;
+		cursor: pointer;
+		transition: transform 0.3s, box-shadow 0.3s;
+		box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.4);
+		&--1 {
+			top: 2rem;
+			left: 1rem;
+			transform: scale(1.15);
+		}
+		&--2 {
+			transform: scale(1.15);
+			z-index: 1;
+		}
+		&--3 {
+			top: 4rem;
+			right: 1rem;
+			transform: scale(1.15);
+		}
+		&:hover {
+			transform: scale(1.2) translateY(-1rem);
+			box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.6);
+			z-index: 5;
+		}
+	}
+}
+
+// features
+.features{
+	position: relative;
+	background-image: $blue-gradient, url(../../src/img/hero-mini.jpg);
+	background-position: center;
+	background-size: cover;
+	overflow: hidden;
+	&__box{
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem;
+		text-align: center;
+	}
+	&__card{
+		margin: 2rem;
+		padding: 2rem;
+		background-color: rgba($color: #fff, $alpha: .5);
+		transition: transform .3s;
+		&:hover{
+			transform: translateY(-1rem) scale(1.05);
+		}
+	}
+	&__icon{
+		font-size: 6rem;	
+        color: $light-main-color;
+		--ionicon-stroke-width: 16px;
+	}
+	&__heading{
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}
+	&__text{
+		font-size: 1.4rem;
+	}
+}
+
+
+@media (min-width: 768px) {
+	body {
+		margin: 1rem;
+	}
+	.navBtn {
+		top: 4rem;
+		right: 4rem;
+	}
+	.nav {
+		&__link {
+			font-size: 4.8rem;
+		}
+	}
+	.header {
+		background-image: $blue-gradient, url(../../src/img/header-big.jpg);
+		&__title {
+			font-size: 7.2rem;
+		}
+		&__text {
+			font-size: 2.2rem;
+		}
+		&__button {
+			margin-top: 1rem;
+			padding: 0.9rem 1.8rem;
+			font-size: 1.8rem;
+		}
+	}
+	.about {
+		margin-bottom: 0;
+		&__box {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 4rem;
+		}
+		&__text {
+			padding: 3rem;
+		}
+		&__heading {
+			font-size: 2.4rem;
+		}
+		&__paragraph {
+			font-size: 1.6rem;
+		}
+		&__imgs {
+			position: relative;
+		}
+		&__img {
+			position: absolute;
+			width: 45%;
+			&--1 {
+				top: 20%;
+				left: 2rem;
+			}
+			&--2 {
+				top: 15%;
+				right: 0;
+			}
+			&--3 {
+				top: 35%;
+				left: 30%;
+			}
+		}
+		&__btn {
+			font-size: 1.6rem;
+		}
+	}
+	.features{
+		background-image: $blue-gradient, url(../../src/img/hero-big.jpg);
+		&__box{
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 3rem;
+		}
+		&__card{
+			padding: 3rem;
+		}
+		&__icon{
+			font-size: 7.2rem;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	body {
+		margin: 2rem;
+	}
+	.about {
+		&__img {
+			width: 55%;
+			&--1 {
+				top: 3rem;
+				left: 0;
+			}
+			&--2 {
+				top: 0rem;
+			}
+			&--3 {
+				top: 13rem;
+				left: 20%;
+			}
+		}
+	}
+	.features{
+		&__box{
+			margin: 0 auto;
+			max-width: 80%;
+		}
+	}
+}

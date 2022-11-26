@@ -1,0 +1,44 @@
+.btn-animation {
+	transition: border 0.4s;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: -9rem;
+		height: 100%;
+		width: 7rem;
+		background-image: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0),
+			rgba(255, 255, 255) 50%
+		);
+		transform: skewX(-45deg);
+		transition: left 0.4s;
+	}
+	&:hover {
+		border: 1px solid black;
+	}
+	&:hover::before {
+		left: 15rem;
+	}
+}
+
+.btn-animation-secondary {
+	&:hover {
+		color: #fff;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 0;
+		width: 100%;
+		background-color: #1755e7;
+		transition: height 0.3s;
+		z-index: -1;
+	}
+	&:hover::before {
+		height: 100%;
+	}
+}
