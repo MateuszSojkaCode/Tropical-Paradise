@@ -26,6 +26,14 @@
 .section-padding {
 	padding: 6rem 0rem;
 }
+.section-padding-large{
+	padding: 15rem 0rem;
+}
+@media (min-width: 768px) {
+	.section-padding{
+	padding: 10rem 0rem;
+	}	
+}
 
 //white-block
 
