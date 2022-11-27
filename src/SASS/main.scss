@@ -264,6 +264,67 @@ li {
 	}
 }
 
+.islands{
+	&__box{
+		display: grid;
+		padding: 3rem;
+	}
+	&__card{
+		position: relative;
+		height: 40rem;
+		perspective: 100rem;
+		text-align: center;
+		color: $light-gray-e;
+		&:hover{
+			.islands__card-front{
+				transform: rotateY(180deg);
+			}
+			.islands__card-back{
+				transform: rotateY(0);
+			}
+		}
+		&-front{
+			padding: 2rem;
+			height: 100%;
+			border-radius: 8px;
+			background-position: center;
+			background-size: cover;
+			transition: transform .5s;
+			
+			&--one{
+				background-image: $light-blue-gradient, url(../../src/img/island1.jpg);	
+			}
+			
+			&-title{
+				font-size: 2.4rem;
+			}
+			&-text{
+				display: flex;
+				align-items: center;
+				position: absolute;
+				right: 3rem;
+				bottom: 3rem;
+			}
+		}
+		&-back{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			padding: 2rem;
+			background-image: $light-blue-gradient-solid;
+			border-radius: 8px;
+			transform: rotateY(-180deg);
+			transition: transform .5s;
+			backface-visibility: hidden;
+		}
+	}	
+}
+.margin-left{
+	margin-left: -1rem;
+}
+//media
 
 @media (min-width: 768px) {
 	body {
