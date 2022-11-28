@@ -271,8 +271,9 @@ li {
 	}
 	&__card{
 		position: relative;
-		height: 40rem;
+		height: 45rem;
 		perspective: 100rem;
+		margin-bottom: 2rem;
 		text-align: center;
 		color: $light-gray-e;
 		&:hover{
@@ -281,6 +282,9 @@ li {
 			}
 			.islands__card-back{
 				transform: rotateY(0);
+			}
+			.islands__card-back-button{
+				opacity: 1;
 			}
 		}
 		&-front{
@@ -293,6 +297,12 @@ li {
 			
 			&--one{
 				background-image: $light-blue-gradient, url(../../src/img/island1.jpg);	
+			}
+			&--two{
+				background-image: $light-blue-gradient, url(../../src/img/island2.jpg);	
+			}
+			&--three{
+				background-image: $light-blue-gradient, url(../../src/img/island3.jpg);	
 			}
 			
 			&-title{
@@ -312,12 +322,52 @@ li {
 			left: 0;
 			bottom: 0;
 			right: 0;
-			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;			
 			background-image: $light-blue-gradient-solid;
 			border-radius: 8px;
 			transform: rotateY(-180deg);
 			transition: transform .5s;
-			backface-visibility: hidden;
+			backface-visibility: hidden; 
+			
+			&-title{
+				position: absolute;
+				top: 2rem;
+				left: 50%;
+				width: 100%;
+				font-size: 2.4rem;
+				transform: translateX(-50%);
+			}
+			
+			&-list{
+				width: 70%;
+				margin: 0 auto;
+				&-item{
+					padding: 1rem;
+					font-size: 1.4rem;
+					border-bottom: 1px white solid;
+				}
+			}
+			&-button{
+				position: absolute;
+				bottom: 2rem;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 80%;
+				padding: 1rem 2rem;
+				color: $dark-grey-1;
+				text-transform: uppercase;
+				// border: none;
+				// border-radius: 8px;
+				// background-color: $cta-color;
+				transition: background-color .3s, opacity .5s;
+				cursor: pointer;
+				// opacity: 0;
+				&:hover{
+					background-color: $cta-color-hover;
+				}
+			}
 		}
 	}	
 }
@@ -423,6 +473,24 @@ li {
 
 		}
 	}
+	.islands{
+		&__box{
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 2rem;
+		}
+		&__card{
+			&--one{
+				grid-column: 1/3;
+			}
+			&--two{
+				grid-column: 3/5;
+			}
+			&--three{
+				grid-column: 2/4;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -445,12 +513,11 @@ li {
 			}
 		}
 	}
-	.features{
+	.features, .islands{
 		&__box{
 			grid-template-columns: repeat(6, 1fr);
 			grid-template-rows: 1fr;
 			margin: 0 auto;
-			max-width: 80%;
 		}
 		&__card{
 			&--one{
@@ -463,5 +530,16 @@ li {
 				grid-column: 5/7;
 			}
 		}
+	}
+	.features{
+		&__box{
+			max-width: 80%;
+		}
+	}
+	.islands{
+		&__box{
+			width: 100%;
+			gap: 4rem;
+		}	
 	}
 }
