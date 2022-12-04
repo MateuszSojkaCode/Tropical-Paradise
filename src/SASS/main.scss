@@ -548,6 +548,7 @@ li {
 		}
 	}
 	.offers{
+		background-image: $blue-gradient, url(../../src/img/offer-big.jpg);
 		&__box{
 			grid-template-columns: repeat(4, 1fr);
 		}
@@ -560,6 +561,13 @@ li {
 			}
 			&--three{
 				grid-column: 2/4;
+			}
+			&__title{
+				font-size: 2.2rem;
+			}
+			&-text{
+				font-size: 1.6rem;
+				line-height: 1.6;
 			}
 		}
 	}
@@ -622,22 +630,24 @@ li {
 	.offers{
 		&__box{
 			grid-template-rows: repeat(3, 1fr);
+			max-width: 90%;
+			margin: 0 auto;
 		}
 		&__card{
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			&--one{
 				grid-row: 1/2;
-				grid-column: 1/-1;
+				grid-column: 1/5;
 			}
 			&--two{
 				grid-row: 2/3;
-				grid-column: 1/-1;
+				grid-column: 1/5;
 				order: 0;
 			}
 			&--three{
 				grid-row: 3/4;
-				grid-column: 1/-1;
+				grid-column: 1/5;
 			}
 			&-img{
 				&--right{
