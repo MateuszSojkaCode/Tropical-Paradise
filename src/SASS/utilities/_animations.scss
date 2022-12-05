@@ -23,7 +23,29 @@
 	}
 }
 
-.btn-animation-secondary {
+.btn-animation-main{
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;	
+		width: 100%;
+		transform: scaleX(0);
+		transition: transform .3s;
+		transform-origin: right;
+		z-index: -1;
+	}
+	&:hover::before{
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+}
+
+.nav-link-animation {
 	&:hover {
 		color: #fff;
 	}
