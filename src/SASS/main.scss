@@ -428,6 +428,32 @@ li {
 	
 }
 
+// footer
+
+.footer{
+	position: relative;
+	padding: 3rem;
+	color: $light-gray-e;
+	text-align: center;
+	font-size: 1.4rem;
+	background-color: $dark-grey-3;
+	overflow: hidden;
+	&__list{
+		margin-top: 5rem;
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid $light-gray-e;
+		&-item{
+			padding: .5rem 0;
+		}
+	}
+	&__info{
+		margin-bottom: 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid $light-gray-e;
+	}
+}
+
 //media
 @media(min-width: 567px){
 	.header{
