@@ -428,6 +428,42 @@ li {
 	
 }
 
+// rewievs
+
+.reviews{
+	margin: 3rem;
+	
+	&__box{
+		width: 90%;
+		margin: 2rem auto;
+	}
+	&__card{
+		padding: 2rem;
+		margin: 2rem 0;
+		border-radius: 8px;
+		background-image: $light-blue-gradient;
+	}
+	&__img{
+		height: 10rem;
+		width: 10rem;
+		margin: auto 2rem;
+		object-fit: cover;
+		border-radius: 50%;
+		float: left;
+	}
+	&__heading{
+		text-transform: uppercase;
+		margin-bottom: 1rem;
+		padding-top: 1rem;
+		font-size: 1.8rem;
+	}
+	&__text{
+		padding-top: 1rem;
+		font-size: 1.4rem;
+	}
+	
+}
+
 // footer
 
 .footer{
@@ -461,6 +497,9 @@ li {
 		border-bottom: 1px solid $light-gray-e;
 	}
 }
+
+
+
 
 //media
 @media(min-width: 576px){
@@ -713,6 +752,12 @@ li {
 				justify-content: space-evenly;
 				padding: 2rem;
 			}
+		}
+	}
+	.reviews{
+		margin: 0;
+		&__box{
+			width: 70%;
 		}
 	}
 }
