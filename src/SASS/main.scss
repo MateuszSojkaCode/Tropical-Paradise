@@ -440,8 +440,11 @@ li {
 	&__card{
 		padding: 2rem;
 		margin: 2rem 0;
+		color: $dark-grey-1;
 		border-radius: 8px;
 		background-image: $light-blue-gradient;
+		background-position: center;
+		background-size: cover;
 	}
 	&__img{
 		height: 10rem;
@@ -640,6 +643,18 @@ li {
 				grid-column: 2/4;
 				grid-row: 2/3;
 			}
+		}
+	}
+	.reviews{
+		&__card{
+			margin: 4rem 0;
+		}
+		&__heading{
+			font-size: 2.2rem;
+		}
+		&__text{
+			padding-top: 0;
+			font-size: 1.6rem;
 		}
 	}
 	.footer{
