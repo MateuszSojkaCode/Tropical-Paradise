@@ -24,6 +24,13 @@
 		font-size: 4.8rem;
 	}
 }
+@media (min-width: 992px){
+	.heading-secondary{
+		&--width-50{
+			width: 50%;
+		}
+	}
+}
 
 //padding
 
