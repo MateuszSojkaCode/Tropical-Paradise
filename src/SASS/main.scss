@@ -467,6 +467,86 @@ li {
 	
 }
 
+// booking
+
+.booking{
+	position: relative;
+	background-image: $blue-gradient, url(../../src/img/contact-small.jpg);
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	&__box{
+		position: relative;
+		margin: 5rem 3rem;
+		background-color: $light-gray-d;		
+		border-radius: 8px;
+		box-shadow: 0 1rem 3rem rgba($color: #000000, $alpha: .5);
+		overflow: hidden;
+	}
+	&__form{
+		width: 100%;
+		margin: 0 auto;
+		padding: 3rem;
+	}
+	&__btn{
+		display: block;
+			margin: 1rem auto;
+			padding: 1rem 2rem;
+			width: 50%;
+			border: none;
+			border-radius: 8px;
+			color: $light-gray-e;
+			background-color: $main-color;
+			transition: background-color .3s;
+			cursor: pointer;
+			&::before{
+				background-color: $secondary-color;
+		}
+	}
+	
+}
+.form{
+	&__group:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+	&__input{
+		width: 100%;
+		padding: 0.8rem 1.6rem;
+		font-size: 1.4rem;
+		font-family: inherit;
+		border-radius: 2px;
+		background-color: rgb(255, 255, 255);
+		border: none;
+		border-bottom: 3px solid transparent;
+		&:focus{
+			outline: none;
+			box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .1);
+			border-bottom: 3px solid $main-color;
+		}
+		&:focus:invalid{
+			border-bottom: 3px solid orangered;
+		}
+	}
+	&__label{
+		display: block;
+		margin-left: 1rem;
+		margin-top: .5rem;		
+		font-size: 1.2rem;
+		font-weight: 700;
+		transition: opacity .3s, visibility .3s, transform .3s;
+	}
+
+	&__input:placeholder-shown + &__label{
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+	
+	}
+}
+.bg-video{
+	display: none;
+}
+
 // footer
 
 .footer{
@@ -773,6 +853,24 @@ li {
 		margin: 0;
 		&__box{
 			width: 70%;
+		}
+	}
+	.booking{
+		&__form{
+			margin: 0;
+			width: 50%;
+		}
+	}
+	.bg-video{
+		display: block;
+		&__content{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+			height: 100%;
+			object-fit: cover;
+			opacity: .8;
 		}
 	}
 }
