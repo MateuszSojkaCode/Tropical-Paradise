@@ -151,7 +151,6 @@ li {
 		text-shadow: 0 0 1rem rgba($color: #000000, $alpha: 1);
 	}
 	&__text {
-		// padding: 1rem;
 		font-size: 1.4rem;
 		color: $light-gray-e;
 		text-shadow: 0 0 0.5rem rgba($color: #000000, $alpha: 1);
@@ -174,7 +173,7 @@ li {
 .about {
 	margin-bottom: 3rem;
 	&__box {
-		padding: 3rem;
+		padding: 0 3rem;
 	}
 	&__text {
 		padding: 3rem 0;
@@ -183,6 +182,7 @@ li {
 	}
 	&__heading {
 		margin-bottom: 1rem;
+		font-size: 1.8rem;
 		text-transform: uppercase;
 		font-weight: 300;
 	}
@@ -192,6 +192,7 @@ li {
 	&__btn {
 		position: relative;
 		padding: 3px;
+		color: $main-color;
 		border-bottom: 1px solid $main-color;
 		transition: color 0.3s;
 	}
@@ -629,6 +630,7 @@ li {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 4rem;
+			padding: 3rem 3rem 0;
 		}
 		&__text {
 			padding: 3rem;
