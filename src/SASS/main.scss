@@ -271,13 +271,13 @@ li {
 .islands{
 	&__box{
 		display: grid;
-		padding: 3rem;
+		padding: 4rem;
 	}
 	&__card{
 		position: relative;
-		height: 45rem;
+		height: 40rem;
 		perspective: 100rem;
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
 		text-align: center;
 		color: $light-gray-e;
 		&:hover{
@@ -307,7 +307,7 @@ li {
 			}
 			
 			&-title{
-				font-size: 2.4rem;
+				font-size: 2rem;
 			}
 			&-text{
 				display: flex;
@@ -338,7 +338,7 @@ li {
 				top: 2rem;
 				left: 50%;
 				width: 100%;
-				font-size: 2.4rem;
+				font-size: 2rem;
 				transform: translateX(-50%);
 			}
 			
@@ -349,6 +349,9 @@ li {
 					padding: 1rem;
 					font-size: 1.4rem;
 					border-bottom: 1px white solid;
+					&:last-child{
+						border-bottom: none;
+					}
 				}
 			}
 			&-button{
@@ -808,16 +811,31 @@ li {
 			}
 		}
 	}
-	.features{
-		&__box{
-			max-width: 80%;
-		}
-	}
 	.islands{
 		&__box{
 			width: 100%;
 			gap: 4rem;
 		}	
+		&__card{
+			height: 45rem;
+			margin-bottom: 0;
+			&-front{
+				&-title{
+					font-size: 2.4rem;
+				}
+			}
+			&-back{
+				&-title{
+					font-size: 2.4rem;
+				}
+			}
+		}
+		
+	}
+	.features{
+		&__box{
+			max-width: 80%;
+		}
 	}
 	.offers{
 		&__box{
