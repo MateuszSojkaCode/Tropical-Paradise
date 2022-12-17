@@ -411,14 +411,18 @@ li {
 			background-color: rgb(255, 255, 255);
 			z-index: 10;
 		}
+		&-title{
+			font-size: 1.8rem;
+		}	
 		&-text{
 			padding: 1rem 0;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 		}
 		&-btn{
 			margin-top: 1rem;
 			padding: 1rem 2rem;
 			width: 100%;
+			font-size: 1.4rem;
 			border: none;
 			border-radius: 8px;
 			color: $light-gray-e;
@@ -600,6 +604,16 @@ li {
 			font-size: 1.6rem;
 		}
 	}
+	.offers{
+		&__card{
+			&-title{
+				font-size: 2rem;
+			}
+			&-text{
+				font-size: 1.4rem;
+			}
+		}
+	}
 }
 @media (min-width: 768px) {
 	body {
@@ -732,6 +746,18 @@ li {
 				grid-column: 2/4;
 				grid-row: 2/3;
 			}
+			&-info{
+				padding: 2rem 3rem;
+			}
+			&-title{
+				font-size: 2.2rem;
+			}
+			&-text{
+				font-size: 1.6rem;
+			}
+			&-btn{
+				margin-bottom: 1rem;
+			}
 		}
 	}
 	.reviews{
@@ -846,6 +872,7 @@ li {
 		&__card{
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: 2rem;
 			&--one{
 				grid-row: 1/2;
 				grid-column: 1/5;
@@ -894,7 +921,7 @@ li {
 			width: 50%;
 			height: 100%;
 			object-fit: cover;
-			opacity: .8;
+			opacity: .7;
 		}
 	}
 }
