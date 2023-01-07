@@ -128,6 +128,11 @@ li {
 .showNav {
 	transform: translateX(-2rem);
 }
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before{
+	background-color: $dark-grey-1;
+}
 
 // header
 .header {
