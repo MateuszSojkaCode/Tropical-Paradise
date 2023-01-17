@@ -130,7 +130,7 @@ li {
 }
 .black-bars-color,
 .black-bars-color::after,
-.black-bars-color::before{
+.black-bars-color::before {
 	background-color: $dark-grey-1;
 }
 
@@ -234,87 +234,90 @@ li {
 }
 
 // features
-.features{
+.features {
 	position: relative;
 	background-image: $blue-gradient, url(../../src/img/hero-mini.jpg);
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
-	&__box{
+	&__box {
 		display: grid;
 		grid-template-columns: 1fr;
 		padding: 2rem;
 		text-align: center;
 		color: $dark-grey-3;
 	}
-	&__card{
+	&__card {
 		margin: 2rem;
 		padding: 2rem;
-		background-color: rgba($color: #fff, $alpha: .5);
-		transition: transform .3s;
-		&:hover{
+		background-color: rgba($color: #fff, $alpha: 0.5);
+		transition: transform 0.3s;
+		&:hover {
 			transform: translateY(-1rem) scale(1.05);
 		}
 	}
-	&__icon{
-		font-size: 6rem;	
-        color: $light-main-color;
+	&__icon {
+		font-size: 6rem;
+		color: $light-main-color;
 		--ionicon-stroke-width: 16px;
 	}
-	&__heading{
+	&__heading {
 		font-weight: 400;
 		margin-bottom: 1rem;
 		font-size: 1.6rem;
 	}
-	&__text{
+	&__text {
 		font-size: 1.4rem;
 	}
 }
 
 // ISLANDS
 
-.islands{
-	&__box{
+.islands {
+	&__box {
 		display: grid;
 		padding: 4rem;
 	}
-	&__card{
+	&__card {
 		position: relative;
 		height: 40rem;
 		perspective: 100rem;
 		margin-bottom: 4rem;
 		text-align: center;
 		color: $light-gray-e;
-		&:hover{
-			.islands__card-front{
+		&:hover {
+			.islands__card-front {
 				transform: rotateY(180deg);
 			}
-			.islands__card-back{
+			.islands__card-back {
 				transform: rotateY(0);
 			}
 		}
-		&-front{
+		&-front {
 			padding: 2rem;
 			height: 100%;
 			border-radius: 8px;
 			background-position: center;
 			background-size: cover;
 			transition: transform 1s;
-			
-			&--one{
-				background-image: $light-blue-gradient, url(../../src/img/island1.jpg);	
+
+			&--one {
+				background-image: $light-blue-gradient,
+					url(../../src/img/island1.jpg);
 			}
-			&--two{
-				background-image: $light-blue-gradient, url(../../src/img/island2.jpg);	
+			&--two {
+				background-image: $light-blue-gradient,
+					url(../../src/img/island2.jpg);
 			}
-			&--three{
-				background-image: $light-blue-gradient, url(../../src/img/island3.jpg);	
+			&--three {
+				background-image: $light-blue-gradient,
+					url(../../src/img/island3.jpg);
 			}
-			
-			&-title{
+
+			&-title {
 				font-size: 2rem;
 			}
-			&-text{
+			&-text {
 				display: flex;
 				align-items: center;
 				position: absolute;
@@ -322,7 +325,7 @@ li {
 				bottom: 3rem;
 			}
 		}
-		&-back{
+		&-back {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -330,15 +333,15 @@ li {
 			right: 0;
 			display: flex;
 			justify-content: center;
-			flex-direction: column;			
+			flex-direction: column;
 			background-image: $light-blue-gradient-solid;
 			border-radius: 8px;
 			transform: rotateY(-180deg);
 			transition: transform 1s;
-			backface-visibility: hidden; 
-			overflow: hidden;
-			
-			&-title{
+			backface-visibility: hidden;
+			// overflow: hidden;
+
+			&-title {
 				position: absolute;
 				top: 2rem;
 				left: 50%;
@@ -346,20 +349,20 @@ li {
 				font-size: 2rem;
 				transform: translateX(-50%);
 			}
-			
-			&-list{
+
+			&-list {
 				width: 70%;
 				margin: 0 auto;
-				&-item{
+				&-item {
 					padding: 1rem;
 					font-size: 1.4rem;
 					border-bottom: 1px white solid;
-					&:last-child{
+					&:last-child {
 						border-bottom: none;
 					}
 				}
 			}
-			&-button{
+			&-button {
 				position: absolute;
 				bottom: 3rem;
 				left: 50%;
@@ -371,59 +374,59 @@ li {
 				border-radius: 8px;
 				background-color: $cta-color;
 				transform: translateX(-50%);
-				transition: background-color .3s;
+				transition: background-color 0.3s;
 				cursor: pointer;
-				&::before{
+				&::before {
 					background-color: $cta-color-hover;
 				}
 			}
 		}
-	}	
+	}
 }
-.margin-left{
+.margin-left {
 	margin-left: -1rem;
 }
 
 // OFFERS
 
-.offers{
+.offers {
 	position: relative;
 	background-image: $blue-gradient, url(../../src/img/offer-mini.jpg);
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
-	
-	&__box{
+
+	&__box {
 		display: grid;
 		gap: 3rem;
 		padding: 3rem;
 	}
-	&__card{
+	&__card {
 		border-radius: 8px;
 		background-color: #fff;
 		overflow: hidden;
 
-		&-img{
+		&-img {
 			width: 100%;
 			object-fit: cover;
-			transition: transform .3s;
-			&:hover{
+			transition: transform 0.3s;
+			&:hover {
 				transform: scale(1.1);
 			}
-		}	
-		&-info{
+		}
+		&-info {
 			padding: 2rem;
 			background-color: rgb(255, 255, 255);
 			z-index: 10;
 		}
-		&-title{
+		&-title {
 			font-size: 1.8rem;
-		}	
-		&-text{
+		}
+		&-text {
 			padding: 1rem 0;
 			font-size: 1.2rem;
 		}
-		&-btn{
+		&-btn {
 			margin-top: 1rem;
 			padding: 1rem 2rem;
 			width: 100%;
@@ -432,99 +435,97 @@ li {
 			border-radius: 8px;
 			color: $light-gray-e;
 			background-color: $main-color;
-			transition: background-color .3s;
+			transition: background-color 0.3s;
 			cursor: pointer;
-			&::before{
+			&::before {
 				background-color: $secondary-color;
 			}
 		}
-
 	}
-	
 }
 
 // rewievs
 
-.reviews{
-	margin: 3rem;
-	
-	&__box{
+.reviews {
+	&__box {
 		width: 90%;
 		margin: 2rem auto;
 	}
-	&__card{
+	&__card {
+		position: relative;
 		padding: 2rem;
-		margin: 2rem 0;
-		color: $dark-grey-1;
+		margin: 4rem 0rem;
+		color: $dark-grey-3;
 		border-radius: 8px;
 		background-image: $light-blue-gradient;
 		background-position: center;
 		background-size: cover;
 	}
-	&__img{
-		height: 10rem;
-		width: 10rem;
+	&__img {
+		position: absolute;
+		bottom: -3rem;
+		right: 0;
+		height: 7rem;
+		width: 7rem;
 		margin: auto 2rem;
 		object-fit: cover;
 		border-radius: 50%;
-		float: left;
+		border: 3px solid $secondary-color;
 	}
-	&__heading{
-		text-transform: uppercase;
-		margin-bottom: 1rem;
-		padding-top: 1rem;
-		font-size: 1.8rem;
-	}
-	&__text{
+	&__text {
 		padding-top: 1rem;
 		font-size: 1.4rem;
 	}
-	
+	&__caption {
+		margin-top: 1rem;
+		font-size: 1.6rem;
+		font-weight: bold;
+		color: $dark-grey-1;
+	}
 }
 
 // booking
 
-.booking{
+.booking {
 	position: relative;
 	background-image: $blue-gradient, url(../../src/img/contact-small.jpg);
 	background-size: cover;
 	background-position: center;
 	overflow: hidden;
-	&__box{
+	&__box {
 		position: relative;
 		margin: 5rem 3rem;
-		background-color: $light-gray-d;		
+		background-color: $light-gray-d;
 		border-radius: 8px;
-		box-shadow: 0 1rem 3rem rgba($color: #000000, $alpha: .5);
+		box-shadow: 0 1rem 3rem rgba($color: #000000, $alpha: 0.5);
 		overflow: hidden;
 	}
-	&__form{
+	&__form {
 		width: 100%;
 		margin: 0 auto;
 		padding: 3rem;
 	}
-	&__btn{
+	&__btn {
 		display: block;
-			margin: 1rem auto;
-			padding: 1rem 2rem;
-			width: 50%;
-			border: none;
-			border-radius: 8px;
-			color: $light-gray-e;
-			background-color: $main-color;
-			transition: background-color .3s;
-			cursor: pointer;
-			&::before{
-				background-color: $secondary-color;
+		margin: 1rem auto;
+		padding: 1rem 2rem;
+		width: 50%;
+		border: none;
+		border-radius: 8px;
+		color: $light-gray-e;
+		background-color: $main-color;
+		transition: background-color 0.3s;
+		cursor: pointer;
+		&::before {
+			background-color: $secondary-color;
 		}
 	}
-	
 }
-.form{
+.form {
 	&__group:not(:last-child) {
 		margin-bottom: 1rem;
 	}
-	&__input{
+	&__input {
 		width: 100%;
 		padding: 0.8rem 1.6rem;
 		font-size: 1.4rem;
@@ -533,38 +534,37 @@ li {
 		background-color: rgb(255, 255, 255);
 		border: none;
 		border-bottom: 3px solid transparent;
-		&:focus{
+		&:focus {
 			outline: none;
-			box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .1);
+			box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.1);
 			border-bottom: 3px solid $main-color;
 		}
-		&:focus:invalid{
+		&:focus:invalid {
 			border-bottom: 3px solid orangered;
 		}
 	}
-	&__label{
+	&__label {
 		display: block;
 		margin-left: 1rem;
-		margin-top: .5rem;		
+		margin-top: 0.5rem;
 		font-size: 1.2rem;
 		font-weight: 700;
-		transition: opacity .3s, visibility .3s, transform .3s;
+		transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
 	}
 
-	&__input:placeholder-shown + &__label{
+	&__input:placeholder-shown + &__label {
 		opacity: 0;
 		visibility: hidden;
 		transform: translateY(-4rem);
-	
 	}
 }
-.bg-video{
+.bg-video {
 	display: none;
 }
 
 // footer
 
-.footer{
+.footer {
 	position: relative;
 	padding: 3rem;
 	color: $light-gray-e;
@@ -572,49 +572,46 @@ li {
 	font-size: 1.4rem;
 	background-color: $dark-grey-3;
 	overflow: hidden;
-	&__list{
+	&__list {
 		margin-top: 5rem;
 		margin-bottom: 1rem;
 		padding-bottom: 1rem;
 		border-bottom: 1px solid $light-gray-e;
-		&-item{
+		&-item {
 			margin: 0 auto;
-			padding: .5rem 0;
-			transition: background-color .3s, transform .3s;
+			padding: 0.5rem 0;
+			transition: background-color 0.3s, transform 0.3s;
 			border-radius: 8px;
 			width: 30%;
-			&:hover{
+			&:hover {
 				background-color: $dark-grey-2;
-				transform: scale(1.2) translateY(-.3rem);
+				transform: scale(1.2) translateY(-0.3rem);
 			}
 		}
 	}
-	&__info{
+	&__info {
 		margin-bottom: 1rem;
 		padding-bottom: 1rem;
 		border-bottom: 1px solid $light-gray-e;
 	}
 }
 
-
-
-
 //media
-@media(min-width: 576px){
-	.header{
-		&__title{
+@media (min-width: 576px) {
+	.header {
+		&__title {
 			font-size: 4.8rem;
 		}
-		&__text{
+		&__text {
 			font-size: 1.6rem;
 		}
 	}
-	.offers{
-		&__card{
-			&-title{
+	.offers {
+		&__card {
+			&-title {
 				font-size: 2rem;
 			}
-			&-text{
+			&-text {
 				font-size: 1.4rem;
 			}
 		}
@@ -686,247 +683,238 @@ li {
 			font-size: 1.6rem;
 		}
 	}
-	.features{
+	.features {
 		background-image: $blue-gradient, url(../../src/img/hero-big.jpg);
-		&__box{
+		&__box {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: repeat(2, 1fr);
 			padding: 3rem;
 		}
-		&__card{
+		&__card {
 			padding: 3rem;
-			&--one{
+			&--one {
 				grid-column: 1 /3;
 			}
-			&--two{
-				grid-column: 3/5;				
+			&--two {
+				grid-column: 3/5;
 			}
-			&--three{
+			&--three {
 				grid-column: 2/4;
 			}
 		}
-		&__icon{
+		&__icon {
 			font-size: 7.2rem;
 			margin-bottom: 1rem;
 		}
-		&__heading{
+		&__heading {
 			font-size: 2rem;
 		}
-		&__text{
+		&__text {
 			font-size: 1.6rem;
-
 		}
 	}
-	.islands{
-		&__box{
+	.islands {
+		&__box {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: repeat(2, 1fr);
 			gap: 2rem;
 		}
-		&__card{
-			&--one{
+		&__card {
+			&--one {
 				grid-column: 1/3;
 			}
-			&--two{
+			&--two {
 				grid-column: 3/5;
 			}
-			&--three{
+			&--three {
 				grid-column: 2/4;
 			}
 		}
 	}
-	.offers{
+	.offers {
 		background-image: $blue-gradient, url(../../src/img/offer-big.jpg);
-		&__box{
-			grid-template-columns: repeat(4, 1fr);			
+		&__box {
+			grid-template-columns: repeat(4, 1fr);
 		}
-		&__card{
-			&--one{
+		&__card {
+			&--one {
 				grid-column: 1/3;
 			}
-			&--two{
+			&--two {
 				grid-column: 3/5;
 			}
-			&--three{
+			&--three {
 				grid-column: 2/4;
 				grid-row: 2/3;
 			}
-			&-info{
+			&-info {
 				padding: 2rem 3rem;
 			}
-			&-title{
+			&-title {
 				font-size: 2.2rem;
 			}
-			&-text{
+			&-text {
 				font-size: 1.6rem;
 			}
-			&-btn{
+			&-btn {
 				margin-bottom: 1rem;
 			}
 		}
 	}
-	.reviews{
+	.reviews {
+		&__box {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 5rem;
+		}
 		&__card{
-			margin: 4rem 0;
-		}
-		&__heading{
-			font-size: 2.2rem;
-		}
-		&__text{
-			padding-top: 0;
-			font-size: 1.6rem;
+			margin: 0;
 		}
 	}
-	.footer{
+	.footer {
 		font-size: 1.6rem;
 		padding-bottom: 5rem;
-		&__list{
+		&__list {
 			display: flex;
 			justify-content: center;
 			padding-bottom: 3rem;
 			padding-top: 3rem;
 			margin-bottom: 3rem;
-			&-item{
+			&-item {
 				padding: 0 2rem;
 				margin: 0;
 				width: 175px;
 			}
 		}
-		&__info{
+		&__info {
 			margin-bottom: 3rem;
-			padding-bottom: 3rem;			
+			padding-bottom: 3rem;
 		}
 	}
-}
 
-@media (min-width: 992px) {
-	body {
-		margin: 2rem;
-	}
-	.header{
-		&__title{
-			font-size: 9.6rem;
+	@media (min-width: 992px) {
+		body {
+			margin: 2rem;
 		}
-	}
-	.about {
-		&__img {
-			width: 55%;
-			&--1 {
-				top: 3rem;
-				left: 0;
-			}
-			&--2 {
-				top: 0rem;
-			}
-			&--3 {
-				top: 13rem;
-				left: 20%;
+		.header {
+			&__title {
+				font-size: 9.6rem;
 			}
 		}
-	}
-	.features, .islands{
-		&__box{
-			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: 1fr;
-			margin: 0 auto;
-		}
-		&__card{
-			&--one{
-				grid-column: 1/3;
-			}
-			&--two{
-				grid-column: 3/5;
-			}
-			&--three{
-				grid-column: 5/7;
-			}
-		}
-	}
-	.islands{
-		&__box{
-			width: 100%;
-			gap: 4rem;
-		}	
-		&__card{
-			height: 45rem;
-			margin-bottom: 0;
-			&-front{
-				&-title{
-					font-size: 2.4rem;
+		.about {
+			&__img {
+				width: 55%;
+				&--1 {
+					top: 3rem;
+					left: 0;
 				}
-			}
-			&-back{
-				&-title{
-					font-size: 2.4rem;
+				&--2 {
+					top: 0rem;
+				}
+				&--3 {
+					top: 13rem;
+					left: 20%;
 				}
 			}
 		}
-		
-	}
-	.features{
-		&__box{
-			max-width: 80%;
-		}
-	}
-	.offers{
-		&__box{
-			grid-template-rows: repeat(3, 1fr);
-			max-width: 95%;
-			margin: 0 auto;
-		}
-		&__card{
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			margin-bottom: 2rem;
-			&--one{
-				grid-row: 1/2;
-				grid-column: 1/5;
+		.features,
+		.islands {
+			&__box {
+				grid-template-columns: repeat(6, 1fr);
+				grid-template-rows: 1fr;
+				margin: 0 auto;
 			}
-			&--two{
-				grid-row: 2/3;
-				grid-column: 1/5;
-				order: 0;
-			}
-			&--three{
-				grid-row: 3/4;
-				grid-column: 1/5;
-			}
-			&-img{
-				max-height: 300px;
-				&--right{
-					order: 1;
+			&__card {
+				&--one {
+					grid-column: 1/3;
+				}
+				&--two {
+					grid-column: 3/5;
+				}
+				&--three {
+					grid-column: 5/7;
 				}
 			}
-			&-info{
-				display: flex;
-				flex-direction: column;
-				justify-content: space-evenly;
-				padding: 2rem;
+		}
+		.islands {
+			&__box {
+				width: 100%;
+				gap: 4rem;
+			}
+			&__card {
+				height: 45rem;
+				margin-bottom: 0;
+				&-front {
+					&-title {
+						font-size: 2.4rem;
+					}
+				}
+				&-back {
+					&-title {
+						font-size: 2.4rem;
+					}
+				}
+			}
+		}
+		.features {
+			&__box {
+				max-width: 80%;
+			}
+		}
+		.offers {
+			&__box {
+				grid-template-rows: repeat(3, 1fr);
+				max-width: 95%;
+				margin: 0 auto;
+			}
+			&__card {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				margin-bottom: 2rem;
+				&--one {
+					grid-row: 1/2;
+					grid-column: 1/5;
+				}
+				&--two {
+					grid-row: 2/3;
+					grid-column: 1/5;
+					order: 0;
+				}
+				&--three {
+					grid-row: 3/4;
+					grid-column: 1/5;
+				}
+				&-img {
+					max-height: 300px;
+					&--right {
+						order: 1;
+					}
+				}
+				&-info {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+					padding: 2rem;
+				}
 			}
 		}
 	}
-	.reviews{
-		margin: 0;
-		&__box{
-			width: 70%;
-		}
-	}
-	.booking{
-		&__form{
+	.booking {
+		&__form {
 			margin: 0;
 			width: 50%;
 		}
 	}
-	.bg-video{
+	.bg-video {
 		display: block;
-		&__content{
+		&__content {
 			position: absolute;
 			top: 0;
 			right: 0;
 			width: 50%;
 			height: 100%;
 			object-fit: cover;
-			opacity: .7;
+			opacity: 0.7;
 		}
 	}
 }
