@@ -281,8 +281,11 @@ li {
 	&__card {
 		position: relative;
 		height: 40rem;
-		perspective: 100rem;
+		width: 100%;
+		max-width: 35rem;
+		margin-inline: auto;
 		margin-bottom: 4rem;
+		perspective: 100rem;
 		text-align: center;
 		color: $light-gray-e;
 		&:hover {
@@ -403,6 +406,8 @@ li {
 	}
 	&__card {
 		border-radius: 8px;
+		max-width: 35rem;
+		margin-inline: auto;
 		background-color: #fff;
 		overflow: hidden;
 
@@ -717,7 +722,7 @@ li {
 		&__box {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: repeat(2, 1fr);
-			gap: 2rem;
+			gap: 4rem;
 		}
 		&__card {
 			&--one {
@@ -737,6 +742,7 @@ li {
 			grid-template-columns: repeat(4, 1fr);
 		}
 		&__card {
+			max-width: 100%;
 			&--one {
 				grid-column: 1/3;
 			}
