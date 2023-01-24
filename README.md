@@ -1,5 +1,5 @@
 # Tropical-Paradise
-https://matsoj-code.github.io/Tropical-Paradise/
+https://mateuszsojkacode.github.io/Tropical-Paradise/
 
 This project is combination of two different projects from two different web-dev courses that I participated. Some of the section look simillar like it main project, other are rearranged in different way. New section and features been added.
 
