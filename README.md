@@ -16,4 +16,4 @@ This project is combination of two different projects from two different web-dev
 * on certain widths images in offers section does not cover full height of their box
 * on Mozilla Firefox rotating cards are working differently
 
-<img src="https://github.com/MateuszSojkaCode/Tropical-Paradise/blob/master/src/img/TP_thumnail.jpg" width="100%">
+<img src="https://github.com/MateuszSojkaCode/Tropical-Paradise/blob/master/src/img/TR_thumbnail.jpg" width="100%">
