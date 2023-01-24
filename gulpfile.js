@@ -56,15 +56,5 @@ function watchForChanges(done){
   done()
 }
 
-
-
-
-// function convertImg(done) {
-//   src("./src/img/*")
-//     .pipe(imagemin())
-//     .pipe(dest("./dist/img"));
-//   done();
-// }
-
 const mainFunctions = parallel(sassCompiler, javaScript);
 exports.default = series(mainFunctions, startBrowserSync, watchForChanges);
